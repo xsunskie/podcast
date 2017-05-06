@@ -21,14 +21,6 @@ define( 'DXP_FOLDER', basename( DXP_PATH ) );
 define( 'DXP_URL', plugins_url() . '/' . DXP_FOLDER );
 define( 'DXP_URL_INCLUDES', DXP_URL . '/inc' );
 
-
-/**
- * 
- * The plugin base class - the root of all WP goods!
- * 
- * @author nofearinc
- *
- */
 class DX_Plugin_Base {
 	
 	/**
@@ -70,12 +62,6 @@ class DX_Plugin_Base {
 		
 		// Add earlier execution as it needs to occur before admin page display
 		add_action( 'admin_init', array( $this, 'dx_register_settings' ), 5 );
-		
-		// Add a sample shortcode
-		//add_action( 'init', array( $this, 'dx_sample_shortcode' ) );
-		
-		// Add a sample widget
-		//add_action( 'widgets_init', array( $this, 'dx_sample_widget' ) );
 		
 		/*
 		 * TODO:
